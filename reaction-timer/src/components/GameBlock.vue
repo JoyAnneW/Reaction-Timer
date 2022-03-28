@@ -12,7 +12,7 @@ export default {
 			// this will store a set interval of 10 ms.
 			timer: null,
 			// every 10 ms reactionTIme will increase
-			reactionTIme: 0,
+			reactionTime: 0,
 		};
 	},
 	// lifecycle hooks. this will fire when the component has been mounted to the dom. we want to start the timer when the component has been mounted and then show the block after the delay
@@ -21,7 +21,7 @@ export default {
 			this.showBlock = true;
 			this.startTimer();
 		}, this.delay);
-		console.log(this.delay);
+		// console.log(this.delay);
 	},
 	// this lifecycle hook fires whenever data is updated in our component
 	updated() {
@@ -32,7 +32,7 @@ export default {
 		startTimer() {
 			// every 10 ms this.timer will run the setinterval method which increases reaction time. the reason setinterval is stored in a variable is so we can clear it later.
 			this.timer = setInterval(() => {
-				this.reactionTIme += 10;
+				this.reactionTime += 10;
 			}, 10);
 		},
 		stopTimer() {
